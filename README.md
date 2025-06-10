@@ -1,92 +1,136 @@
-# AutoHotKey Macros for GTA Online
+# AutoHotkey Macros for GTA Online
 
-This repository contains an AutoHotKey script designed to automate various actions in GTA Online, enhancing gameplay efficiency.
+## 🆕 Changelog
+
+### [Current Version]
+
+#### Added
+
+- Listed all available macro functions with default hotkeys and descriptions in a dedicated section.
+- Updated “Features” and “Usage” to match the current AHK v2 script structure and actual functions.
+- Improved explanations for each function for clarity.
+- Improved “Special Hotkeys & Controls” documentation.
+- Performance, stability, and compatibility notes for AHK v2.
+
+#### Removed
+
+- **Easy Way Out (EWO)** related hotkeys (`N`, `J`, `RShift`) and descriptions (no corresponding macro in the current script).
+- Strafe automation (no strafe-related macros in the current script).
+- Session reconnect/suspend-related hotkey (`Break` key).
+- Any legacy/obsolete hotkey documentation from v1 versions.
+
+---
+
+This repository provides an AutoHotkey v2 script designed to streamline and automate various actions in GTA Online, allowing for more efficient and convenient gameplay.
 
 ## ⚠️ Disclaimer
 
-Use these macros at your own risk. Automating gameplay may violate Rockstar's terms of service and could result in account suspension or banning. The creators and contributors of this repository are not responsible for any consequences resulting from the use of these scripts.
+**Please use these macros at your own discretion.**
+Automating game actions may violate Rockstar’s terms of service and could result in account suspension or banning. The creators and contributors of this repository cannot be held responsible for any consequences arising from the use of these scripts.
 
 ## 🚀 Features
 
-- Quick EWO (Easy Way Out) for 2024 execution
-- Fast BST (Bull Shark Testosterone) usage
-- Rapid armour application
-- CEO/MC quick actions
-- Weapon switching automation
-- Vehicle summoning shortcuts
-- Strafe automation (not optimized yet)
-- Pegasus and Mechanic quick calls
-- Thermal vision toggle
-- Job menu navigation
-- And many more game-enhancing shortcuts
+- Rapid use of Bull Shark Testosterone (BST)
+- Quick application of armor
+- Instant switching between CEO and MC activities
+- Automated weapon and vehicle selection
+- Convenient shortcuts for calling services (Mechanic, Mors Mutual, Pegasus, Lester)
+- Thermal vision toggle, job menu navigation, outfit changes, and more
+- Special function: Temporarily assigns left Ctrl to the right mouse button when held
+- Optimized for performance and stability with AutoHotkey v2
 
 ## 🛠️ Installation
 
-1. Download and install [AutoHotKey](https://www.autohotkey.com/).
+1. Download and install [AutoHotkey v2.0 or higher](https://www.autohotkey.com/).
 2. Clone this repository or download the script file.
-3. Double-click the `.ahk` file to run the script.
+3. Double-click the `.ahk` file to launch the script.
+   _(Please note: This script will not work with AutoHotkey v1.)_
 
 ## 📖 Usage
 
-### Main Hotkeys:
+### Main Hotkeys
 
-- `N`: Execute EWO (Easy Way Out)
-- `RShift`: Set up EWO codes in GTAHaX
-- `Insert`: Use BST (Bull Shark Testosterone)
-- `ScrollLock`: Apply armour
-- `J`: Suicide by stinger for fast respawn
-- `NumpadDiv`: Switch to CEO
-- `NumpadMult`: Switch to MC
-- `NumpadAdd`: Activate Bribe Authorities
-- `NumpadEnter`: Activate CEO Ghost Organization
-- `NumpadDot`: Change outfit
-- `NumpadSub`: Purchase ammo
-- `sc079`: Toggle thermal vision
-- `sc070`: Show jobs
-- `]`: Toggle engine
-- `[`: Switch weapon
-- `/`: Spawn RC vehicle
-- `.`: Spawn Sanchez
+| Hotkey      | Function | Description                                                          |
+| ----------- | -------- | -------------------------------------------------------------------- |
+| Insert      | BST      | Use Bull Shark Testosterone (BST) via menu navigation                |
+| ScrollLock  | Armor    | Apply armor through menu selections                                  |
+| NumpadDiv   | MCCEO    | Switch to CEO position (MC → CEO)                                    |
+| NumpadMult  | CEOMC    | Switch to MC position (CEO → MC)                                     |
+| NumpadAdd   | Bribe    | Activate Bribe Authorities (removes wanted level temporarily)        |
+| NumpadEnter | CEOGhost | Activate CEO Ghost Organization (become off the radar)               |
+| NumpadDot   | Outfit   | Change outfit via menu                                               |
+| NumpadSub   | Ammo     | Purchase ammunition (with automated cursor movement and block input) |
+| sc079       | Thermal  | Toggle thermal vision                                                |
+| sc070       | ShowJobs | Show the Jobs menu                                                   |
+| ]           | Engine   | Toggle car engine (on/off)                                           |
+| [           | Weapon   | Perform weapon menu action                                           |
+| /           | RC       | Request/summon RC vehicle                                            |
+| .           | Sanchez  | Request/summon Sanchez bike                                          |
+| RCtrl       | Sparrow  | Request/summon Sparrow chopper                                       |
+| Numpad1     | Mech     | Call Mechanic                                                        |
+| Numpad3     | Mors     | Call Mors Mutual Insurance                                           |
+| Numpad7     | Pegasus  | Call Pegasus delivery                                                |
+| Numpad9     | Lester   | Call Lester (for various services)                                   |
+| 6           | Six      | Quick switch to weapon slot 6 (with Tab)                             |
+| 7           | Seven    | Quick switch to weapon slot 7 (with Tab)                             |
+| 8           | Eight    | Quick switch to weapon slot 8 (with Tab)                             |
+| 9           | Nine     | Quick switch to weapon slot 9 (with Tab)                             |
 
-### Vehicle and Service Hotkeys:
+### Special Hotkeys & Controls
 
-- `Numpad1`: Call Mechanic
-- `Numpad3`: Call Mors Mutual Insurance
-- `Numpad7`: Call Pegasus
-- `Numpad9`: Call Lester
+| Hotkey                    | Function      | Description                                                 |
+| ------------------------- | ------------- | ----------------------------------------------------------- |
+| F1                        | Suspend       | Suspend/resume the macro script, shows ToolTip notification |
+| F2                        | Reload        | Reload the macro script instantly                           |
+| Right Mouse Button (hold) | Ctrl Modifier | Hold right-click >0.5s to act as Left Ctrl (while held)     |
 
-### Control Hotkeys:
+_Some hotkeys (e.g., Four/Five) are currently commented out in the script. To enable these, please edit the script directly._
 
-- `F1`: Suspend/Resume the script
-- `F2`: Reload the script
-- `Break`: Reconnect to session (suspends and resumes GTA5.exe process)
+---
 
-### Special Functions:
+_Overview of the interaction menu shown in GTA Online._
+![Overview](./Overview.png)
 
-- Right-click + 500ms hold: Activates left control
-- `K`: Disable strafe
-- `Y`: Enable strafe
-- `C`: Toggle strafe (while held)
+## 🏷️ Macro Function Details
+
+- **BST**: Opens the menu and selects Bull Shark Testosterone for quick use.
+- **Armor**: Quickly applies armor by navigating the inventory menus.
+- **MCCEO / CEOMC**: Automates switching between Motorcycle Club and CEO roles.
+- **Bribe / CEOGhost**: Activates key CEO abilities (Bribe Authorities, Ghost Organization).
+- **Outfit**: Changes your character’s outfit in-game quickly.
+- **Ammo**: Purchases ammunition by automating menu navigation and cursor movement, temporarily blocks input for safety/stability.
+- **Thermal**: Toggles thermal vision for compatible vehicles/outfits.
+- **ShowJobs**: Opens the Jobs menu for fast navigation.
+- **Engine**: Toggles vehicle engine on/off.
+- **Weapon**: Quick access to weapons or the weapon menu.
+- **RC / Sanchez / Sparrow**: One-key requests for special vehicles.
+- **Mech / Mors / Pegasus / Lester**: Rapidly calls each in-game service provider.
+- **Six / Seven / Eight / Nine**: Specialized hotkeys for weapon slot selection (requires holding Tab).
+- **Suspend / Reload**: Pause or reload the macro easily, with on-screen feedback.
+- **Ctrl Modifier**: Holding right-click for >0.5 seconds emulates Left Ctrl; handy for advanced menu maneuvers.
+
+---
 
 ## 🔧 Customization
 
-You can customize the hotkeys by editing the key bindings at the beginning of the script. Basic AutoHotKey knowledge is required for advanced modifications.
+You may customize any hotkey to your preference by editing the key bindings at the beginning of the script.
+A basic understanding of AutoHotkey is recommended for advanced modifications.
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page or submit pull requests.
-
+Contributions, issues, and feature requests are welcome.
+Please feel free to submit an issue or a pull request to help improve the script.
 
 ## 🔍 Technical Details
 
-- The script uses various AutoHotKey commands and functions to simulate key presses and mouse movements.
-- It interacts with the game's menu system to perform actions quickly.
-- Some functions use DllCall for advanced operations like cursor positioning.
-- The script includes a process suspension function for session reconnection.
+- Developed using AutoHotkey v2 function and hotkey assignment syntax.
+- Utilizes DllCall for advanced functions, such as direct cursor positioning.
+- Includes script optimizations for improved responsiveness.
+- Hotkeys are both global and context-sensitive for optimal performance.
 
 ## 🙏 Acknowledgements
 
-- AutoHotKey community for their invaluable resources
-- GTA Online players for inspiration and testing
+- Grateful thanks to the AutoHotkey community for their documentation and shared knowledge.
+- Appreciation to GTA Online players who provided feedback and support during testing.
 
-Remember to use these macros responsibly and respect the game's intended gameplay mechanics. Overuse of automation tools can lead to an unfair gaming environment and potential account actions.
+**Please use automation tools responsibly and respect the intended gameplay experience. Excessive automation may negatively impact the gaming environment for others and could result in account action. Thank you for your understanding.**
